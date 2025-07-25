@@ -8,7 +8,10 @@ require('dotenv').config();
 const callLogRoutes = require('./routes/callLogRoutes');
 
 const app= express();
-app.use(cors('http://192.168.1.6:5173'));
+app.use(cors({
+  origin: ['http://192.168.1.6:5173'], 
+  credentials: true
+}));
 
 
 const server=http.createServer(app);
@@ -27,7 +30,8 @@ app.get('/', (req, res) => {
 const io= new Server(server,{
   cors:{
     origin:'http://192.168.1.6:5173',
-    methods:['GET','POST']
+    methods:['GET','POST'],
+    credentials: true
   }
 });
 
