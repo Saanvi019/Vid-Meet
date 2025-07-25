@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 
 const io= new Server(server,{
   cors:{
-    origin:'*',
+    origin:'http://192.168.1.6:5173',
     methods:['GET','POST']
   }
 });
