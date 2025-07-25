@@ -1,0 +1,224 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;min-height: 100vh;
+}
+
+.navbar{
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  border-radius: 0.7rem;
+  
+  
+}
+.logo{
+  font-size: 1.8rem;
+  font-weight:500;
+}
+.nav-links{
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: black;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+.video-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* When chat is open, videos stack vertically */
+.with-chat .videoBox {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 0;
+}
+
+/* When chat is closed, videos are side by side */
+.no-chat .videoBox {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 3rem;
+}
+
+.video {
+  background-color: white;
+  border-radius: 15px;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3 / 2;
+}
+
+.chatbox {
+  background: linear-gradient(130deg, #c7230694, #3618bb8e);
+  border-radius: 20px;
+  padding: 1rem;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80vh;
+  margin: 1rem auto;
+  box-sizing: border-box;
+  position: fixed;
+  overflow-y: auto;
+  
+  right: 0;
+  z-index: 1000;
+}
+.inputbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.type{
+  border-radius: 15px;
+  height: 2rem;
+  width: 70%;
+  
+}
+.send{
+  border-radius: 20px;
+  height: 2.3rem;
+  width: 3.5rem;
+  color: white;
+  background-color: #007bff;
+}
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.vid {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  min-height: 100vh;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+/* When chat is open, make .vid a row on desktop */
+@media (min-width: 768px) {
+  .vid.chat-open {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+/* Mobile: stack everything vertically */
+@media (max-width: 768px) {
+  .video-container,
+  .videoBox,
+  .chatbox,
+  .vid {
+    flex-direction: column !important;
+    align-items: center !important;
+    
+    
+  }
+  .videoBox{
+    margin-top: -2rem;
+  }
+
+  .chatbox {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    margin: 1rem auto;
+  }
+
+  .video {
+    max-width: 70vw;
+    height: auto;
+    margin-left: -2rem;
+    
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 0.5rem;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.startcall,
+.startchat {
+  padding: 12px 24px;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #c72306c0;
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  margin-top: -6rem;
+  transition: background-color 0.3s ease;
+}
+
+.startcall:hover,
+.startchat:hover {
+  background-color: #3618bbad;
+}

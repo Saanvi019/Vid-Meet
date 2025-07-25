@@ -1,0 +1,330 @@
+.sidebar-toggle{
+  display: block;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.6rem;
+  color: white;
+  background-color:black;
+  position: fixed;
+  top: 4rem;
+  left: 0rem;
+  z-index: 1001;
+  border: black;
+}
+.sidebar {
+  position: fixed;
+  top: 4rem;
+  left: 0rem;
+  width: 12.5rem;           
+  height: 80vh;
+  background: linear-gradient(120deg, #c72306, #3618bb);
+  color: white;
+  padding: 3.5rem 0.93rem 1.25rem; 
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  z-index: 1000;
+  border-radius: 12px;
+}
+.sidebar.open{
+  transform: translateX(0);
+}
+.sidebar h3 {
+  margin-bottom: 1rem;   
+  font-size: 1rem;       
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.sidebar-link{
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  
+  
+  
+}
+.sidebar-link svg{
+  font-size: 1.7rem;
+  color:white;
+  text-decoration: none;
+  padding-top: 0.5rem;
+  
+}
+
+.sidebar li {
+  margin-bottom: 0.9rem; 
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;            
+  cursor: pointer;
+  
+}
+
+.close-sidebar {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) { 
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+}
+
+.landing-container {
+  display: flex;
+  
+  align-items:center;
+  justify-content: space-around;
+  min-height: 90vh;
+  padding: 0.2rem;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+}
+
+.landing-right {
+  flex: 1;
+  max-width: 500px;
+}
+
+.landing-right > div {
+  width: 100%;
+  height: auto;
+}
+
+
+.landing-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.landing-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+.silo.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(130deg, #c72306, #3618bb);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 180px;
+}
+
+.silo.button:hover {
+  background-color: #5935bd;
+}
+
+
+.landing-buttons p {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+
+@media (max-width: 600px) {
+  .landing-container h1 {
+    font-size: 2rem;
+  }
+
+  .silo.button {
+    width: 100%;
+  }
+  .landing-right{
+    display: none;
+  }
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+}
+
+
+.login-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+
+}
+
+.login-image {
+  width: 300px;
+  height: auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 300px;
+  background: linear-gradient(130deg, #c723065b, #3618bb50);
+  padding: 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.login-form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background-color: #f0f0f0;
+}
+
+
+.login-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #357abd;
+}
+
+
+@media (max-width: 500px) {
+  .login-form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .login-container h2 {
+    font-size: 2rem;
+  }
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  padding: 2rem;
+  background-color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signup-container h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: white;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: linear-gradient(130deg, #c723065b, #3618bb50);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-form input {
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.signup-form input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.signup-form button {
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.signup-form button:hover {
+  background-color: #0056b3;
+}
+
+
+@media (max-width: 480px) {
+  .signup-form {
+    padding: 1.5rem;
+  }
+
+  .signup-container h2 {
+    font-size: 1.7rem;
+  }
+}
+
+.history-container {
+  padding: 20px;
+}
+
+.call-log-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.call-log-table th, .call-log-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.call-log-table th {
+  background-color: #f4f4f4;
+}
