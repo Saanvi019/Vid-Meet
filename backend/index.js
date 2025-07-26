@@ -9,7 +9,7 @@ const callLogRoutes = require('./routes/callLogRoutes');
 
 const app= express();
 app.use(cors({
-  origin: ['https://vid-meet-hazel.vercel.app/'], 
+  origin: ['https://vid-meet-hazel.vercel.app'], 
   credentials: true
 }));
 
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 const io= new Server(server,{
   cors:{
-    origin:'https://vid-meet-hazel.vercel.app/',
+    origin:'https://vid-meet-hazel.vercel.app',
     methods:['GET','POST'],
     credentials: true
   }
