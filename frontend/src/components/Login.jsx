@@ -10,7 +10,7 @@ const Login = ({setUsername}) => {
   const[inputUsername,setInputusername]=useState('');
   const[password,setPassword]=useState('');
   const navigate=useNavigate();
-  const BASE_URL = 'http://192.168.1.6:4000';
+  const BASE_URL = 'https://vid-meet-backend.onrender.com';
 
   const handleLogin=async(e)=>{
     e.preventDefault();//Prevents the default behavior of a form submission, which is reloading the page.
