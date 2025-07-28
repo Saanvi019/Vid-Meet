@@ -29,7 +29,7 @@ const [remoteId, setRemoteId] = useState(null); // NEW
 
   useEffect(() => {
     if (!socket.current) {
-      socket.current = io('ws://vid-meet-backend.onrender.com');
+      socket.current = io('https://vid-meet-backend.onrender.com');
       console.log(socket.current);
       //remotePeer.current=io('http://localhost:4000');
       //remoteSocketId.current= remotePeer.current.id;
