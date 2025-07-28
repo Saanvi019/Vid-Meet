@@ -9,7 +9,7 @@ const SignUp = () => {
   const[password,setpassword]=useState('');
   const[confirmpassword,setconfirmpassword]=useState('');
   const navigate=useNavigate();
-  const BASE_URL = 'http://192.168.1.6:4000';
+  const BASE_URL = 'https://vid-meet-backend.onrender.com';
   
   const handlesignup=async(e)=>{
 
